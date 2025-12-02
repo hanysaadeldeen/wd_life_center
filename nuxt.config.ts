@@ -37,6 +37,16 @@ export default defineNuxtConfig({
           name: "description",
           content: "",
         },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        {
+          property: "og:image",
+          content: "https://wdlife.com.sa/OgImage.png",
+        },
+        {
+          name: "twitter:image",
+          content: "https://wdlife.com.sa/OgImage.png",
+        },
       ],
     },
   },
