@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="w-full bg-bgT py-6 mt-10">
+    <div class="mt-10 w-full bg-BGG py-6">
       <div class="container mx-auto px-4 text-center text-sm text-gray-600">
         &copy; 2024 My Application. All rights reserved.
       </div>

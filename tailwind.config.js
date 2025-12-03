@@ -11,12 +11,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1E40AF",
-        bg: "#F59E0B",
-        bgT: "#F6F7F5",
+        primary: "#A38B71",
+        BG: "#F3F0EA",
+        BGG: "#F6F7F5",
         Secondary: "#DDDECC",
         primary50: "#E4DACB",
         primary10: "#F4F1ED",
+      },
+      textColor: {
+        Text: "#2A2118",
       },
     },
   },
