@@ -1,5 +1,5 @@
 <template>
-  <button class="gradient-button">
+  <button type="submit" class="gradient-button w-fit">
     {{ label }}
   </button>
 </template>

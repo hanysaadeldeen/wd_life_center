@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto flex h-dvh w-full max-w-[1120px] items-center justify-center max-md:px-4">
+  <div class="mx-auto flex h-dvh w-full max-w-[1120px] items-center justify-center max-lg:px-4">
     <div class="mx-auto max-w-[607px] text-center">
       <h1 class="mb-5 text-2xl font-bold text-Text md:text-3xl lg:text-4xl lg:leading-[60px]">
         مكانك الآمن لفهم نفسك، وإصلاح ما يؤلمك، واستعادة توازنك

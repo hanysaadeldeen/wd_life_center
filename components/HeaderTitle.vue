@@ -11,7 +11,7 @@
 <script setup lang="ts">
 interface Props {
   title: string;
-  description: string;
+  description?: string;
 }
 
 defineProps<Props>();

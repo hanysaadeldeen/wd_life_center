@@ -1,11 +1,14 @@
 <template>
-  <min>
+  <main>
     <HeroSection />
+    <AboutUs />
     <GoalsValuesSection />
     <ServicesSection />
-  </min>
+    <CTASection />
+    <TeamSection />
+    <ValuesSection />
+    <ContactFrom />
+  </main>
 </template>
 
-<script setup>
-const { locales, setLocale } = useI18n();
-</script>
+<script setup></script>

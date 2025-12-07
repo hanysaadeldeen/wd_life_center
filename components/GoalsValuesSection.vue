@@ -1,7 +1,7 @@
 <template>
-  <section class="mx-auto w-full max-w-[1120px] max-md:px-4">
+  <section class="mx-auto w-full max-w-[1120px] max-lg:px-4">
     <HeaderTitle title="أهدافنا">
-      <h2 class="mt-3 text-2xl font-bold md:text-3xl">
+      <h2 class="mt-3 text-2xl font-bold text-Text md:text-3xl">
         ما نطمح لتحقيقه من خلال مشروعنا النفسي المتكامل
       </h2>
     </HeaderTitle>
