@@ -7,7 +7,6 @@
 <script setup lang="ts">
 interface Props {
   label: string;
-  link?: string;
 }
 
 defineProps<Props>();

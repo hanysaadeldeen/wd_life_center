@@ -1,8 +1,8 @@
 <template>
-  <footer class="bg-black py-5">
-    <div class="l max-lg:px- mx-auto w-full max-w-[1120px] py-20">
-      <div class="grid grid-cols-1 gap-8 px-6 text-white sm:grid-cols-2 md:grid-cols-6">
-        <div class="col-span-2 max-w-[482px] md:col-span-3">
+  <footer id="footer" class="bg-black py-5">
+    <div class="mx-auto w-full max-w-[1120px] py-20 max-lg:px-4">
+      <div class="grid grid-cols-3 gap-8 text-white md:grid-cols-6 lg:grid-cols-12 lg:gap-12">
+        <div class="col-span-3 lg:col-span-6">
           <img
             src="~/assets/image/LogoFooter.svg"
             alt="logo"
@@ -38,7 +38,7 @@
           </Form>
         </div>
 
-        <div class="col-span-1 md:col-span-1">
+        <div class="col-span-1 max-sm:col-span-3 lg:col-span-2">
           <h3 class="mb-5 text-lg font-semibold text-BG md:text-xl">استكشف</h3>
           <ul class="text-bg flex flex-col gap-4 text-lg font-normal md:text-xl">
             <li>
@@ -62,7 +62,7 @@
           </ul>
         </div>
 
-        <div class="col-span-1 md:col-span-2">
+        <div class="col-span-2 max-sm:col-span-3 lg:col-span-4">
           <h3 class="mb-5 text-lg font-semibold text-BG md:text-xl">تواصل معنا</h3>
           <address class="not-italic">
             <ul class="flex flex-col gap-4 text-lg font-normal md:text-xl">

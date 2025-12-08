@@ -1,18 +1,20 @@
 <template>
   <section class="mx-auto w-full max-w-[1120px] max-lg:px-4">
-    <div class="flex items-center justify-between rounded-[40px] bg-black px-16 py-6">
+    <div
+      class="flex items-center justify-between rounded-[40px] bg-black px-8 py-6 max-md:flex-col md:px-12 lg:px-16"
+    >
       <div class="flex w-full max-w-[575px] flex-col">
-        <h2 class="mb-4 text-2xl font-bold text-BG md:mb-6 lg:text-[32px] lg:leading-[36px]">
+        <h2 class="mb-4 text-2xl font-bold text-BG md:mb-6 lg:text-[28px] lg:leading-[48px]">
           هل ترغب في مساعدة الآخرين والمشاركة في مبادرتنا لحياة نفسية أكثر صحة؟
         </h2>
-        <p class="mb-6 max-w-[521px] text-lg font-normal text-BG md:mb-10 md:text-xl">
+        <p class="mb-6 max-w-[474px] text-lg font-normal text-BG md:mb-10">
           كن جزءًا من فريقنا المتخصص في الصحة النفسية وساهم بخبرتك في إحداث تأثير إيجابي.
         </p>
         <div class="relative z-10">
           <button class="gradient-button w-fit">انضم للفريق</button>
         </div>
       </div>
-      <div class="">
+      <div>
         <img
           src="~/assets/image/utils/heartCta.svg"
           alt="heart Logo"

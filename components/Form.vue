@@ -70,9 +70,7 @@
           id="message"
           name="message"
           as="textarea"
-          :placeholder="
-            locale === 'en' ? 'Write your project details or inquiry here' : 'اكتب رسالتك هنا'
-          "
+          :placeholder="locale === 'en' ? 'Write your message here' : 'اكتب رسالتك هنا'"
           class="inputBack focus:ring-Primary h-32 w-full resize-none !rounded-2xl border p-4 focus:outline-none focus:ring-2 md:h-[100px]"
           :class="{ '!border-red-500': errors.message }"
         />

@@ -1,5 +1,5 @@
 <template>
-  <section class="mx-auto w-full max-w-[1120px] max-lg:px-4">
+  <section id="contactSection" class="mx-auto w-full max-w-[1120px] max-lg:px-4">
     <div class="flex justify-between gap-10 rounded-[40px] bg-BG p-6 md:p-10 lg:p-16">
       <div class="w-full md:max-w-[439px]">
         <div class="mb-4 md:mb-6">
