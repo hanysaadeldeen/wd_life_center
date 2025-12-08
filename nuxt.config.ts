@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: '',
+          content: 'مكانك الآمن لفهم نفسك، وإصلاح ما يؤلمك، واستعادة توازنك',
         },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
