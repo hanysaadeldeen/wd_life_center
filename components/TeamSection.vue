@@ -12,7 +12,7 @@
     >
       <div
         class="boxShadow mx-auto flex w-full max-w-[320px] flex-col items-center justify-center gap-4 rounded-3xl px-8 py-14"
-        v-for="doctor in Doctors"
+        v-for="doctor in doctorsData"
       >
         <div
           class="DoctorContainer relative mx-auto flex h-[183px] w-[183px] items-center justify-center rounded-full border-[5px] border-white"
@@ -26,38 +26,66 @@
           />
         </div>
         <div class="text-center">
-          <h3 class="mb-1 text-lg font-bold text-Text md:text-xl">{{ $t(doctor.name) }}</h3>
+          <h3 class="mb-1 text-lg font-bold text-Text md:text-xl">{{ doctor.name }}</h3>
           <p class="line-clamp-2 text-sm font-medium text-primary md:text-base">
-            {{ $t(doctor.title) }}
+            {{ doctor.title }}
           </p>
         </div>
-        <Button label="احجز موعد" />
+        <div @click="openModal(doctor)">
+          <Button label="احجز موعد" />
+        </div>
       </div>
     </div>
+    <DoctorModal
+      v-if="selectedDoctor"
+      :doctor="selectedDoctor"
+      :isOpen="isModalOpen"
+      @close="closeModal"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
+import doctorsData from '~/data/AlldoctorsData-ar.json';
+
+const selectedDoctor = ref(null);
+const isModalOpen = ref(false);
+
+const openModal = (doctor: any) => {
+  selectedDoctor.value = doctor;
+  isModalOpen.value = true;
+  console.log('doctor');
+  console.log(selectedDoctor.value);
+  console.log(isModalOpen.value);
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+  setTimeout(() => {
+    selectedDoctor.value = null;
+  }, 300); // بعد انتهاء الـ transition
+};
+
 // Imports
-import wafaa from '~/assets/image/doctors/Dr. Wafaa Abdullateef Mira-n.svg';
-import ahmed from '~/assets/image/doctors/Dr. Ahmad Al-Qosi-n.svg';
-import ali from '~/assets/image/doctors/Dr. Ali Al-Shammari-n.svg';
-import jumana from '~/assets/image/doctors/Dr. Jumana Khairelbeili-n.svg';
-import maha from '~/assets/image/doctors/Dr. Maha Al-Hamri-n.svg';
-import obair from '~/assets/image/doctors/Dr. Obair Khayat-n.svg';
-import jamalYahya from '~/assets/image/doctors/Mr. Jamal Yahya Hassan-n.svg';
-import jameel from '~/assets/image/doctors/Mr. Jameel Al-kateb-n.svg';
-import muhammadAbdul from '~/assets/image/doctors/Mr. Muhammed Abdul Ghaffar-n.svg';
-import muhammadYahya from '~/assets/image/doctors/Mr. Muhammed Yahya-n.svg';
-import ashuaq from '~/assets/image/doctors/Ms. Ashuaq Al-Farsani-n.svg';
-import ghufran from '~/assets/image/doctors/Ms. Ghufran Baathman-n.svg';
-import haifa from '~/assets/image/doctors/Ms. Haifaa Babtain-n.svg';
-import khulood from '~/assets/image/doctors/Ms. Khulood Muhammad-n.svg';
-import lama from '~/assets/image/doctors/Ms. Lama Ghaleb-n.svg';
-import omayma from '~/assets/image/doctors/Ms. Omayma Fadel-n.svg';
-import saja from '~/assets/image/doctors/Ms. Saja Al-Otaibi-n.svg';
-import shluiuh from '~/assets/image/doctors/Ms. Shluioh Al-Mohammadi-n.svg';
-import WD_Female_Avatar from '~/assets/image/doctors/WD_Female_Avatar_two.svg';
+import wafaa from '../public/doctors/Dr. Wafaa Abdullateef Mira-n.svg';
+import ahmed from '../public/doctors/Dr. Ahmad Al-Qosi-n.svg';
+import ali from '../public/doctors/Dr. Ali Al-Shammari-n.svg';
+import jumana from '../public/doctors/Dr. Jumana Khairelbeili-n.svg';
+import maha from '../public/doctors/Dr. Maha Al-Hamri-n.svg';
+import obair from '../public/doctors/Dr. Obair Khayat-n.svg';
+import jamalYahya from '../public/doctors/Mr. Jamal Yahya Hassan-n.svg';
+import jameel from '../public/doctors/Mr. Jameel Al-kateb-n.svg';
+import muhammadAbdul from '../public/doctors/Mr. Muhammed Abdul Ghaffar-n.svg';
+import muhammadYahya from '../public/doctors/Mr. Muhammed Yahya-n.svg';
+import ashuaq from '../public/doctors/Ms. Ashuaq Al-Farsani-n.svg';
+import ghufran from '../public/doctors/Ms. Ghufran Baathman-n.svg';
+import haifa from '../public/doctors/Ms. Haifaa Babtain-n.svg';
+import khulood from '../public/doctors/Ms. Khulood Muhammad-n.svg';
+import lama from '../public/doctors/Ms. Lama Ghaleb-n.svg';
+import omayma from '../public/doctors/Ms. Omayma Fadel-n.svg';
+import saja from '../public/doctors/Ms. Saja Al-Otaibi-n.svg';
+import shluiuh from '../public/doctors/Ms. Shluioh Al-Mohammadi-n.svg';
+import WD_Female_Avatar from '../public/doctors/WD_Female_Avatar_two.svg';
 
 // Array
 const Doctors = [
@@ -308,5 +336,41 @@ const Doctors = [
     rgba(221, 191, 165, 1) 50%,
     rgba(163, 139, 113, 1) 100%
   );
+}
+
+.gradient-button {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgba(163, 139, 113, 1) 0%,
+    rgba(221, 191, 165, 1) 50%,
+    rgba(163, 139, 113, 1) 100%
+  );
+  padding: 8px 24px;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  position: relative;
+}
+.gradient-button:hover {
+  color: black;
+}
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50px;
+  background: linear-gradient(
+    to right,
+    rgba(163, 139, 113, 1) 0%,
+    rgba(221, 191, 165, 1) 50%,
+    rgba(163, 139, 113, 1) 100%
+  );
+  z-index: -1;
 }
 </style>
