@@ -1,14 +1,5 @@
 <template>
-   <teleport to="body">
-    <Transition name="modal">
-      <Transition
-        v-if="isOpen"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4"
-        @click.self="closeModal"
-      >
-
-    </Transition>
-    </teleport>
+  <div></div>
 </template>
 
 <script setup lang="ts">
@@ -21,7 +12,6 @@ const props = defineProps<Props>();
 
 const emit = defineEmits(['close']);
 </script>
-
 
 <style scoped>
 .modal-enter-active,

@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts',
   },
   app: {
+    baseURL: '/newversion/',
     head: {
       script: [],
       link: [

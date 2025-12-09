@@ -36,12 +36,12 @@
         </div>
       </div>
     </div>
-    <DoctorModal
+    <!-- <DoctorModal
       v-if="selectedDoctor"
       :doctor="selectedDoctor"
       :isOpen="isModalOpen"
       @close="closeModal"
-    />
+    /> -->
   </section>
 </template>
 
